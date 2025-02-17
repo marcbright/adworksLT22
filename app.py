@@ -6,10 +6,10 @@ from sqlalchemy import create_engine
 
 
 # SQL Server connection details
-server = '' 
-database = ''
-username = '' 
-password = ''
+#server = '' 
+#database = ''
+#username = '' 
+#password = ''
 
 # Load environment variables
 server = os.getenv("AZURE_SERVER")
