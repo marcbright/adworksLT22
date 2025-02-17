@@ -6,17 +6,18 @@ from sqlalchemy import create_engine
 
 
 # SQL Server connection details
-#server = '' 
-#database = ''
-#username = '' 
-#password = ''
+server = 'sqldatabasebok.database.windows.net' 
+database = 'adworkLT22'
+username = 'bright' 
+password = 'Openforme25'
+
 
 # Load environment variables
-server = os.getenv("AZURE_SERVER")
-database = os.getenv("AZURE_DATABASE")
-username = os.getenv("AZURE_USERNAME")
-password = os.getenv("AZURE_PASSWORD")
-#driver = os.getenv("AZURE_DRIVER", "ODBC Driver 17 for SQL Server")
+#server = os.getenv("AZURE_SERVER")
+#database = os.getenv("AZURE_DATABASE")
+#username = os.getenv("AZURE_USERNAME")
+#password = os.getenv("AZURE_PASSWORD")
+#driver = "ODBC Driver 17 for SQL Server"
 
 # Create a SQLAlchemy Engine
 engine = create_engine(f"mssql+pyodbc://{username}:{password}@{server}/{database}"
