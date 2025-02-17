@@ -5,10 +5,10 @@ from sqlalchemy import create_engine
 
 
 # SQL Server connection details
-server = 'DESKTOP-PHE7T8U' 
-database = 'AdventureWorksLT2022'
-username = '' 
-password = ''
+server = 'sqldatabasebok.database.windows.net' 
+database = 'adworkLT22'
+username = 'bright' 
+password = 'Openforme25'
 
 # Create a SQLAlchemy Engine
 engine = create_engine(f"mssql+pyodbc://{username}:{password}@{server}/{database}?driver=ODBC+Driver+17+for+SQL+Server")
