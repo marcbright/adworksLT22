@@ -19,8 +19,7 @@ password = os.getenv("AZURE_PASSWORD")
 #driver = os.getenv("AZURE_DRIVER", "ODBC Driver 17 for SQL Server")
 
 # Create a SQLAlchemy Engine
-engine = create_engine(f"mssql+pyodbc://{username}:{password}@{server}/{database}"
-    f"?driver=ODBC+Driver+17+for+SQL+Server&TrustServerCertificate=yes")
+engine = create_engine(f"DRIVER=ODBC Driver 17 for SQL Server;SERVER={server};DATABASE={database};UID={username};PWD={password};TrustServerCertificate=yes")
 
 # Set page configuration
 st.set_page_config(page_title="AdventureWorks Sales Dashboard", page_icon="📊", layout="wide")
